@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="id">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -8,320 +9,434 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html { scroll-behavior: smooth; }
-/* DEFAULT (MOBILE AMAN) */
-.glass {
-  background: rgba(20,20,20,.95);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* DESKTOP SAJA – GLASS AKTIF */
-@media (min-width: 768px) {
-  .glass {
-    background: rgba(255,255,255,.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,.1);
-  }}
+    /* DEFAULT (MOBILE AMAN) */
+    .glass {
+      background: rgba(20, 20, 20, .95);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    /* DESKTOP SAJA – GLASS AKTIF */
+    @media (min-width: 768px) {
+      .glass {
+        background: rgba(255, 255, 255, .08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, .1);
+      }
+    }
   </style>
 </head>
 
 <body class="bg-neutral-950 text-slate-100">
 
-<!-- NAVBAR -->
-<header class="fixed top-0 w-full z-50">
-  <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center glass rounded-b-xl">
-    <span class="font-bold text-lg">Rafid Alifsyah</span>
+  <!-- NAVBAR -->
+  <header class="fixed top-0 w-full z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center glass rounded-b-xl">
+      <span class="font-bold text-lg">Rafid Alifsyah</span>
 
-    <!-- DESKTOP -->
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="#home" class="hover:text-indigo-400">Home</a>
-      <a href="#profile" class="hover:text-indigo-400">Profile</a>
-      <a href="#works" class="hover:text-indigo-400">Project</a>
-      <a href="#media" class="hover:text-indigo-400">Media</a>
-      <a href="#info" class="hover:text-indigo-400">Informasi</a>
-      <a href="#contact" class="hover:text-indigo-400">Kontak</a>
-    </div>
-
-    <!-- MOBILE BTN -->
-    <button id="menuBtn" class="md:hidden p-2">
-      <svg id="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-      <svg id="menuClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
-  </nav>
-
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 glass">
-    <a href="#home" class="block py-2">Home</a>
-    <a href="#profile" class="block py-2">Profile</a>
-    <a href="#works" class="block py-2">Project</a>
-    <a href="#media" class="block py-2">Media</a>
-    <a href="#info" class="block py-2">Informasi</a>
-    <a href="#contact" class="block py-2">Kontak</a>
-  </div>
-</header>
-
-<main class="pt-28">
-
-<!-- HOME -->
-<section id="home" class="min-h-screen flex items-center">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-    <div>
-      <span class="text-sm text-indigo-400 bg-indigo-500/10 px-4 py-1 rounded-full">
-        Web Developer
-      </span>
-      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold">
-        Halo, saya <span class="text-indigo-400">Rafid Alifsyah</span>
-      </h1>
-      <p class="mt-4 text-slate-300">
-      fokus backend Laravel & UI/UX sederhana.
-      </p>
-    </div>
-
-    <div class="flex justify-center">
-      <div class="w-72 h-72 rounded-3xl overflow-hidden shadow-xl">
-        <img src="mentahan/foto_saya.jpg" class="w-full h-full object-cover">
+      <!-- DESKTOP -->
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="#home" class="hover:text-indigo-400">Home</a>
+        <a href="#profile" class="hover:text-indigo-400">Profile</a>
+        <a href="#works" class="hover:text-indigo-400">Project</a>
+        <a href="#media" class="hover:text-indigo-400">Media</a>
+        <a href="#info" class="hover:text-indigo-400">Informasi</a>
+        <a href="#contact" class="hover:text-indigo-400">Kontak</a>
       </div>
+
+      <!-- MOBILE BTN -->
+      <button id="menuBtn" class="md:hidden p-2">
+        <svg id="menuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menuClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 glass">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#profile" class="block py-2">Profile</a>
+      <a href="#works" class="block py-2">Project</a>
+      <a href="#media" class="block py-2">Media</a>
+      <a href="#info" class="block py-2">Informasi</a>
+      <a href="#contact" class="block py-2">Kontak</a>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- PROFILE -->
-<section id="profile" class="py-24 bg-neutral-900">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-    <div class="md:col-span-2">
-      <h2 class="text-3xl font-bold mb-4">Profile</h2>
- <p class="text-slate-300">
-  Saya mahasiswa yang tertarik pada web development, backend Laravel,
-  dan pembuatan antarmuka yang rapi serta responsif.
-</p>
+  <main class="pt-28">
 
-      <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
-        <div class="glass p-4 rounded">🎓 SMK Tunas Media</div>
-        <div class="glass p-4 rounded">💻 HTML, CSS, JS, Laravel</div>
-        <div class="glass p-4 rounded">🛠 VSCode, Git, Figma</div>
-        <div class="glass p-4 rounded">🌐 Indonesia, English (basic)</div>
-      </div>
-    </div>
-
-    <div class="glass p-6 rounded-xl text-center">
-      <h3 class="font-semibold mb-4">Statistik</h3>
-      <div class="grid grid-cols-2 gap-4">
+    <!-- HOME -->
+    <section id="home" class="min-h-screen flex items-center">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <div class="count text-3xl font-bold text-indigo-400" data-target="12">0</div>
-          <div class="text-xs text-slate-400">Project</div>
-        </div>
-        <div>
-          <div class="count text-3xl font-bold text-indigo-400" data-target="3">0</div>
-          <div class="text-xs text-slate-400">Pencapaian</div>
-        </div>
-        <div>
-          <div class="count text-3xl font-bold text-indigo-400" data-target="4">0</div>
-          <div class="text-xs text-slate-400">Bahasa</div>
-        </div>
-        <div>
-          <div class="count text-3xl font-bold text-indigo-400" data-target="100">0</div>
-          <div class="text-xs text-slate-400">Jam Coding</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section><!-- PROJECT -->
-<section id="works" class="py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold">Project</h2>
-
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-
-      <!-- CARD -->
-      <article
-        onclick="openProject()"
-        class="bg-neutral-900 rounded-xl overflow-hidden cursor-pointer hover:scale-[1.02] transition">
-        <img src="mentahan/iya.jpg" class="h-44 w-full object-cover">
-        <div class="p-5">
-          <h3 class="font-semibold">POS Laravel</h3>
-          <p class="text-sm text-slate-400 mt-1">
-            Klik untuk detail
+          <span class="text-sm text-indigo-400 bg-indigo-500/10 px-4 py-1 rounded-full">
+            Web Developer
+          </span>
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold">
+            Halo, saya <span class="text-indigo-400">Rafid Alifsyah</span>
+          </h1>
+          <p class="mt-4 text-slate-300">
+            fokus backend Laravel & UI/UX sederhana.
           </p>
         </div>
-      </article>
 
-    </div>
-  </div>
-</section>
+        <div class="flex justify-center">
+          <div class="w-72 h-72 rounded-3xl overflow-hidden shadow-xl">
+            <img src="foto_saya.jpg" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- PROJECT MODAL -->
-<div id="projectModal"
-     class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+    <!-- PROFILE -->
+    <section id="profile" class="py-24 bg-neutral-900">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold mb-4">Profile</h2>
+          <p class="text-slate-300">
+            Saya mahasiswa yang tertarik pada web development, backend Laravel,
+            dan pembuatan antarmuka yang rapi serta responsif.
+          </p>
 
-  <div class="bg-neutral-900 rounded-xl max-w-lg w-full mx-4 relative animate-fade">
+          <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
+            <div class="glass p-4 rounded">🎓 SMK Tunas Media</div>
+            <div class="glass p-4 rounded">💻 HTML, CSS, JS, Laravel</div>
+            <div class="glass p-4 rounded">🛠 VSCode, Git, Figma</div>
+            <div class="glass p-4 rounded">🌐 Indonesia, English (basic)</div>
+          </div>
+        </div>
 
-    <!-- CLOSE -->
-    <button onclick="closeProject()"
-            class="absolute top-3 right-3 text-slate-400 hover:text-white text-xl">
-      ✕
-    </button>
-
-    <img src="mentahan/iya.jpg"
-         class="w-full h-48 object-cover rounded-t-xl">
-
-    <div class="p-6">
-      <h3 class="text-xl font-semibold">POS Laravel</h3>
-      <p class="text-slate-400 mt-3 text-sm leading-relaxed">
-        Aplikasi Point of Sale berbasis Laravel yang memiliki fitur
-        manajemen produk, transaksi penjualan, pencatatan stok,
-        diskon, serta laporan penjualan. Dirancang dengan UI sederhana
-        dan responsif untuk kebutuhan toko.
-      </p>
-    </div>
-
-  </div>
-</div>
-<!-- MEDIA -->
-<section id="media" class="py-24 bg-neutral-900">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold">Media</h2>
-    <p class="text-slate-400 mt-2">Foto & video pendek hasil kerja</p>
-
-    <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-
-      <!-- FOTO -->
-      <div class="group relative overflow-hidden rounded-xl">
-        <img src="media/foto1.jpg"
-             class="w-full h-40 object-cover group-hover:scale-110 transition">
+        <div class="glass p-6 rounded-xl text-center">
+          <h3 class="font-semibold mb-4">Statistik</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <div class="count text-3xl font-bold text-indigo-400" data-target="25">0</div>
+              <div class="text-xs text-slate-400">Project</div>
+            </div>
+            <div>
+              <div class="count text-3xl font-bold text-indigo-400" data-target="3">0</div>
+              <div class="text-xs text-slate-400">Pencapaian</div>
+            </div>
+            <div>
+              <div class="count text-3xl font-bold text-indigo-400" data-target="4">0</div>
+              <div class="text-xs text-slate-400">Bahasa</div>
+            </div>
+            <div>
+              <div class="count text-3xl font-bold text-indigo-400" data-target="100">0</div>
+              <div class="text-xs text-slate-400">Jam Coding</div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="group relative overflow-hidden rounded-xl">
-        <img src="media/foto2.jpg"
-             class="w-full h-40 object-cover group-hover:scale-110 transition">
+      <!-- ================= PROJECT ================= -->
+      <section id="works" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-3xl font-bold">Project</h2>
+
+          <div class="mt-8 grid md:grid-cols-3 gap-6">
+
+            <!-- CARD 1 -->
+            <article onclick="openProject('project1')"
+              class="bg-neutral-900 rounded-xl overflow-hidden cursor-pointer hover:scale-[1.02] transition">
+              <div class="bg-black aspect-[4/5]">
+                <img src="iya.jpg" class="w-full h-full object-contain">
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold">Web Data Instruktur</h3>
+                <p class="text-sm text-slate-400 mt-1">Klik untuk detail</p>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article onclick="openProject('project2')"
+              class="bg-neutral-900 rounded-xl overflow-hidden cursor-pointer hover:scale-[1.02] transition">
+              <div class="bg-black aspect-[4/5]">
+                <img src="iya2.jpeg" class="w-full h-full object-contain">
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold">Website Hotel</h3>
+                <p class="text-sm text-slate-400 mt-1">Klik untuk detail</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MODAL PROJECT ================= -->
+
+      <!-- MODAL 1 -->
+      <div id="project1" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+        <div class="bg-neutral-900 rounded-xl max-w-lg w-full mx-4 relative animate-fade">
+          <button onclick="closeProject('project1')" class="absolute top-3 right-3 text-slate-400 text-xl">✕</button>
+
+          <div class="bg-black aspect-video rounded-t-xl">
+            <img src="iya.jpg" class="w-full h-full object-contain">
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Web Data Instruktur</h3>
+            <p class="text-xs text-slate-400 mb-2">PHP Native • MySQL</p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Website pengelolaan data instruktur yang dikembangkan secara tim
+              selama kegiatan PKL di PPKD Jakarta Selatan untuk pendataan,
+              pengelompokan keahlian, serta pengelolaan informasi instruktur.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <!-- VIDEO PENDEK -->
-      <div class="relative rounded-xl overflow-hidden">
-        <video class="w-full h-40 object-cover"
-               src="media/video1.mp4"
-               autoplay muted loop playsinline>
-        </video>
+      <!-- MODAL 2 -->
+      <div id="project2" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+        <div class="bg-neutral-900 rounded-xl max-w-lg w-full mx-4 relative animate-fade">
+          <button onclick="closeProject('project2')" class="absolute top-3 right-3 text-slate-400 text-xl">✕</button>
+
+          <div class="bg-black aspect-video rounded-t-xl">
+            <img src="iya2.jpeg" class="w-full h-full object-contain">
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Website Hotel</h3>
+            <p class="text-xs text-slate-400 mb-2">Laravel • MySQL • Bootstrap</p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Website hotel berbasis framework Laravel yang dikembangkan secara
+              berkelompok. Aplikasi ini menampilkan informasi kamar, fasilitas,
+              dan data pendukung lainnya dengan penerapan konsep MVC serta
+              tampilan responsif agar nyaman digunakan pada berbagai perangkat.
+            </p>
+
+          </div>
+        </div>
       </div>
 
-      <div class="relative rounded-xl overflow-hidden">
-        <video class="w-full h-40 object-cover"
-               src="media/video2.mp4"
-               autoplay muted loop playsinline>
-        </video>
-      </div>
+    
 
-    </div>
-  </div>
-</section>
+      <!-- MEDIA -->
+      <section id="media" class="py-24 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-6">
 
-<!-- INFORMASI -->
-<section id="info" class="py-24">
-  <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">Informasi</h2>
-    <article class="bg-neutral-900 p-6 rounded-xl text-slate-300 leading-relaxed">
-      Selama belajar di jurusan RPL, saya terbiasa mengerjakan proyek web
-      baik individu maupun tim. Saya terus mengembangkan skill backend
-      Laravel dan UI/UX untuk persiapan dunia kerja.
-    </article>
-  </div>
-</section>
+          <h2 class="text-3xl font-bold">Media</h2>
+          <p class="text-slate-400 mt-2">
+            Dokumentasi visual, video demo, audio, dan dokumen pendukung project
+          </p>
 
-<!-- CONTACT -->
-<section id="contact" class="py-24 bg-neutral-900">
-  <div class="max-w-xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold">Kontak</h2>
-    <form id="contactForm" class="mt-6 grid gap-4">
-      <input name="name" required class="p-3 rounded bg-neutral-950" placeholder="Nama">
-      <input name="email" required type="email" class="p-3 rounded bg-neutral-950" placeholder="Email">
-      <textarea name="message" required rows="4" class="p-3 rounded bg-neutral-950" placeholder="Pesan"></textarea>
-      <button class="bg-indigo-600 py-3 rounded-lg">Kirim</button>
-    </form>
-  </div>
-</section>
+          <!-- ================= FOTO ================= -->
+          <h3 class="text-xl font-semibold mt-12 mb-4">📸 Foto</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
 
-<footer class="py-8 text-center text-slate-500">
-  © <span id="year"></span> Rafid Alifsyah
-</footer>
+            <!-- FOTO 1 -->
+            <div class="rounded-xl bg-neutral-800 overflow-hidden">
+              <div class="group relative bg-black aspect-[4/5] cursor-pointer open-modal" data-type="image"
+                data-src="1.png">
+                <img src="1.png" class="w-full h-full object-contain transition group-hover:scale-105">
+              </div>
+              <p class="text-xs text-slate-300 p-3">
+                Tampilan antarmuka sistem penilaian kepuasan karyawan.
+              </p>
+            </div>
 
-</main>
 
-<!-- JS -->
-<script>
-/* MOBILE MENU */
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuOpen = document.getElementById('menuOpen');
-const menuClose = document.getElementById('menuClose');
 
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-  menuOpen.classList.toggle('hidden');
-  menuClose.classList.toggle('hidden');
-});
+          </div>
 
-/* COUNTER */
-const counters = document.querySelectorAll('.count');
-let started = false;
+          <!-- ================= VIDEO ================= -->
+          <h3 class="text-xl font-semibold mt-14 mb-4">🎥 Video</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
 
-function runCounter() {
-  counters.forEach(counter => {
-    const target = +counter.dataset.target;
-    let current = 0;
-    const step = Math.ceil(target / 60);
+            <!-- VIDEO PENILAIAN -->
+            <div class="rounded-xl bg-neutral-800 overflow-hidden">
+              <div class="relative bg-black aspect-[4/5]">
+                <video class="w-full h-full object-contain" src="projekPenilaian.mp4" autoplay muted loop
+                  playsinline></video>
 
-    function update() {
-      current += step;
-      if (current < target) {
-        counter.textContent = current;
-        requestAnimationFrame(update);
-      } else {
-        counter.textContent = target;
-      }
+                <button onclick="
+            const v=this.previousElementSibling;
+            v.muted=!v.muted;
+            this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
+          " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+                  🔊 Sound
+                </button>
+              </div>
+              <p class="text-xs text-slate-300 p-3">
+                Video demo sistem penilaian kepuasan karyawan.
+              </p>
+            </div>
+
+            <!-- VIDEO HOTEL -->
+            <div class="rounded-xl bg-neutral-800 overflow-hidden">
+              <div class="relative bg-black aspect-[4/5]">
+                <video class="w-full h-full object-contain" src="projekHotel.mp4" autoplay muted loop
+                  playsinline></video>
+
+                <button onclick="
+            const v=this.previousElementSibling;
+            v.muted=!v.muted;
+            this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
+          " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+                  🔊 Sound
+                </button>
+              </div>
+              <p class="text-xs text-slate-300 p-3">
+                Demo website hotel dengan tampilan responsif.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- ================= AUDIO ================= -->
+          <h3 class="text-xl font-semibold mt-14 mb-4">🎧 Audio</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <div class="rounded-xl bg-neutral-800 p-4">
+              <p class="text-sm text-slate-300 mb-2">Audio Pendukung</p>
+              <audio controls class="w-full">
+                <source src="lagu.mp3" type="audio/mpeg">
+              </audio>
+              <p class="text-xs text-slate-400 mt-2">
+                Cuplikan audio sebagai media pendukung portofolio.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- ================= DOKUMEN ================= -->
+          <h3 class="text-xl font-semibold mt-14 mb-4">📄 Dokumen</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            <div class="rounded-xl bg-neutral-800 p-4">
+              <p class="text-sm text-slate-300 mb-2">Dokumen Project</p>
+              <a href="figma.pdf" target="_blank"
+                class="inline-flex items-center gap-2 text-sm text-blue-400 hover:underline">
+                📄 Desain Web Penilaian Kepuasan Karyawan (PDF)
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- INFORMASI -->
+      <section id="info" class="py-24">
+        <div class="max-w-5xl mx-auto px-6">
+          <h2 class="text-3xl font-bold mb-6">Informasi</h2>
+          <article class="bg-neutral-900 p-6 rounded-xl text-slate-300 leading-relaxed">
+            Selama belajar di jurusan RPL, saya terbiasa mengerjakan proyek web
+            baik individu maupun tim. Saya terus mengembangkan skill backend
+            Laravel dan UI/UX untuk persiapan dunia kerja.
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-24 bg-neutral-900">
+        <div class="max-w-xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold">Kontak</h2>
+          <form id="contactForm" class="mt-6 grid gap-4">
+            <input name="name" required class="p-3 rounded bg-neutral-950" placeholder="Nama">
+            <input name="email" required type="email" class="p-3 rounded bg-neutral-950" placeholder="Email">
+            <textarea name="message" required rows="4" class="p-3 rounded bg-neutral-950"
+              placeholder="Pesan"></textarea>
+            <button class="bg-indigo-600 py-3 rounded-lg">Kirim</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="py-8 text-center text-slate-500">
+        © <span id="year"></span> Rafid Alifsyah
+      </footer>
+
+  </main>
+
+  <!-- JS -->
+  <script>
+    /* MOBILE MENU */
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuOpen.classList.toggle('hidden');
+      menuClose.classList.toggle('hidden');
+    });
+
+    /* COUNTER */
+    const counters = document.querySelectorAll('.count');
+    let started = false;
+
+    function runCounter() {
+      counters.forEach(counter => {
+        const target = +counter.dataset.target;
+        let current = 0;
+        const step = Math.ceil(target / 60);
+
+        function update() {
+          current += step;
+          if (current < target) {
+            counter.textContent = current;
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = target;
+          }
+        }
+        update();
+      });
     }
-    update();
-  });
-}
 
-window.addEventListener('scroll', () => {
-  const box = document.querySelector('.glass');
-  if (!started && box.getBoundingClientRect().top < window.innerHeight - 100) {
-    runCounter();
-    started = true;
-  }
-});
+    window.addEventListener('scroll', () => {
+      const box = document.querySelector('.glass');
+      if (!started && box.getBoundingClientRect().top < window.innerHeight - 100) {
+        runCounter();
+        started = true;
+      }
+    });
 
-/* FORM */
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  alert('Pesan terkirim (simulasi)');
-  e.target.reset();
-});
+    /* FORM */
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Pesan terkirim (simulasi)');
+      e.target.reset();
+    });
 
-/* YEAR */
-document.getElementById('year').textContent = new Date().getFullYear();
-/* PROJECT MODAL */
-const projectModal = document.getElementById('projectModal');
+    /* YEAR */
+    document.getElementById('year').textContent = new Date().getFullYear();
+    /* PROJECT MODAL */
+    function openProject(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
 
-function openProject() {
-  projectModal.classList.remove('hidden');
-  projectModal.classList.add('flex');
-}
+    function closeProject(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
 
-function closeProject() {
-  projectModal.classList.add('hidden');
-  projectModal.classList.remove('flex');
-}
+    // klik background nutup
+    document.querySelectorAll('[id^="project"]').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if (e.target === modal) modal.classList.add('hidden');
+      });
+    });
+    // klik background nutup
+    projectModal.addEventListener('click', e => {
+      if (e.target === projectModal) closeProject();
+    });
 
-// klik background nutup
-projectModal.addEventListener('click', e => {
-  if (e.target === projectModal) closeProject();
-});
-</script>
+  </script>
 
 </body>
+
 </html>
