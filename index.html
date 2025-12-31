@@ -167,6 +167,19 @@
               </div>
             </article>
 
+            <!-- CARD 3 -->
+            <article onclick="openProject('project3')"
+              class="bg-neutral-900 rounded-xl overflow-hidden cursor-pointer hover:scale-[1.02] transition">
+              <div class="bg-black aspect-[4/5]">
+                <img src="webKelas.png" class="w-full h-full object-contain">
+              </div>
+              <div class="p-5">
+                <h3 class="font-semibold">Web Pengumpulan Tugas</h3>
+                <p class="text-sm text-slate-400 mt-1">Klik untuk detail</p>
+              </div>
+            </article>
+
+
           </div>
         </div>
       </section>
@@ -216,6 +229,28 @@
           </div>
         </div>
       </div>
+      <!-- MODAL 3 -->
+      <div id="project3" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
+        <div class="bg-neutral-900 rounded-xl max-w-lg w-full mx-4 relative animate-fade">
+          <button onclick="closeProject('project3')" class="absolute top-3 right-3 text-slate-400 text-xl">✕</button>
+
+          <div class="bg-black aspect-video rounded-t-xl">
+            <img src="webKelas.png" class="w-full h-full object-contain">
+          </div>
+
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Web Pengumpulan Tugas</h3>
+            <p class="text-xs text-slate-400 mb-2">HTML • CSS</p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Website pengumpulan tugas yang dibuat untuk memenuhi instruksi dosen.
+              Aplikasi ini berfungsi untuk menampilkan daftar mahasiswa yang telah
+              mengumpulkan tugas, sehingga memudahkan dosen dalam memantau status
+              pengumpulan secara cepat dan terorganisir.
+            </p>
+
+          </div>
+        </div>
+      </div>
 
 
 
@@ -229,27 +264,67 @@
           </p>
 
           <!-- ================= FOTO ================= -->
-          <h3 class="text-xl font-semibold mt-12 mb-4">📸 Foto</h3>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <h3 class="text-xl font-semibold mt-12 mb-6">📸 Foto</h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- FOTO 1 -->
             <div class="rounded-xl bg-neutral-800 overflow-hidden">
-              <div class="group relative bg-black aspect-[4/5] cursor-pointer open-modal" data-type="image"
+              <div class="group relative bg-black aspect-video cursor-pointer open-modal" data-type="image"
                 data-src="1.png">
-                <img src="1.png" class="w-full h-full object-contain transition group-hover:scale-105">
+                <img src="1.png" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
               </div>
-              <p class="text-xs text-slate-300 p-3">
+              <p class="text-xs text-slate-300 p-4">
                 Tampilan antarmuka sistem penilaian kepuasan karyawan.
               </p>
             </div>
 
+            <!-- FOTO 2 -->
+            <div class="rounded-xl bg-neutral-800 overflow-hidden">
+              <div class="group relative bg-black aspect-video cursor-pointer open-modal" data-type="image"
+                data-src="2.png">
+                <img src="2.png" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+              </div>
+              <p class="text-xs text-slate-300 p-4">
+                Web POS.
+              </p>
+            </div>
 
+            <!-- FOTO 3 -->
+            <div class="rounded-xl bg-neutral-800 overflow-hidden">
+              <div class="group relative bg-black aspect-video cursor-pointer open-modal" data-type="image"
+                data-src="3.png">
+                <img src="3.jpeg" class="w-full h-full object-cover transition duration-300 group-hover:scale-105">
+              </div>
+              <p class="text-xs text-slate-300 p-4">
+                Foto sesudah sidang PKL.
+              </p>
+            </div>
 
           </div>
+
 
           <!-- ================= VIDEO ================= -->
           <h3 class="text-xl font-semibold mt-14 mb-4">🎥 Video</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+            <!-- VIDEO DEVICE -->
+            <div class="rounded-xl bg-neutral-800 overflow-hidden">
+              <div class="relative bg-black aspect-[4/5]">
+                <video class="w-full h-full object-contain" src="device.mp4" autoplay muted loop playsinline></video>
+
+                <button onclick="
+        const v=this.previousElementSibling;
+        v.muted=!v.muted;
+        this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
+      " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+                  🔊 Sound
+                </button>
+              </div>
+              <p class="text-xs text-slate-300 p-3">
+                Dokumentasi perangkat yang digunakan saat mengerjakan tugas ini.
+              </p>
+            </div>
 
             <!-- VIDEO PENILAIAN -->
             <div class="rounded-xl bg-neutral-800 overflow-hidden">
@@ -258,10 +333,10 @@
                   playsinline></video>
 
                 <button onclick="
-            const v=this.previousElementSibling;
-            v.muted=!v.muted;
-            this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
-          " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+        const v=this.previousElementSibling;
+        v.muted=!v.muted;
+        this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
+      " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
                   🔊 Sound
                 </button>
               </div>
@@ -277,10 +352,10 @@
                   playsinline></video>
 
                 <button onclick="
-            const v=this.previousElementSibling;
-            v.muted=!v.muted;
-            this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
-          " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
+        const v=this.previousElementSibling;
+        v.muted=!v.muted;
+        this.innerText = v.muted ? '🔇 Mute' : '🔊 Sound';
+      " class="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded">
                   🔊 Sound
                 </button>
               </div>
@@ -308,7 +383,7 @@
                 </p>
               </div>
 
-              <!-- DOKUMEN -->
+              <!-- DOKUMEN 1 -->
               <div class="rounded-xl bg-neutral-800 p-5 flex flex-col justify-between">
                 <div>
                   <p class="text-sm text-slate-300 mb-2">📄 Dokumen Project</p>
@@ -320,6 +395,21 @@
                 <a href="figma.pdf" target="_blank"
                   class="inline-flex items-center gap-2 text-sm text-blue-400 hover:underline mt-auto">
                   📄 Desain Web Penilaian Kepuasan Karyawan (PDF)
+                </a>
+              </div>
+
+              <!-- DOKUMEN 2 -->
+              <div class="rounded-xl bg-neutral-800 p-5 flex flex-col justify-between">
+                <div>
+                  <p class="text-sm text-slate-300 mb-2">📄 Dokumen Project</p>
+                  <p class="text-xs text-slate-400 mb-3">
+                    File pendukung berisi desain dan dokumentasi project.
+                  </p>
+                </div>
+
+                <a href="tugas POS.pdf" target="_blank"
+                  class="inline-flex items-center gap-2 text-sm text-blue-400 hover:underline mt-auto">
+                  📄 Tugas POS (PDF)
                 </a>
               </div>
 
